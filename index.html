@@ -2,48 +2,95 @@
 <!-- Created April 3rd, 2023 -->
 <!-- A website to better organize user created quests and keeps track of them. Additional features may come in the future. -->
 <!DOCTYPE html>
-<html lang ="en">
+<html lang="en">
 <head>
-    <meta charset = "UTF-8">
-    <title>The Guild</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quest Tracker</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+  }
+  .header {
+    text-align: center;
+    background-color: #f1f1f1;
+    padding: 20px;
+    font-size: 24px;
+  }
+  .nav {
+    display: flex;
+    justify-content: center;
+    background-color: #333;
+  }
+  .nav a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  .nav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  th, td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: left;
+  }
+  th {
+    background-color: #f2f2f2;
+  }
+  .list-container {
+    display: flex;
+    justify-content: space-around;
+  }
+  .quest-list {
+    width: 45%;
+  }
+</style>
 </head>
 <body>
-    <header>
-        <h1>The Guild</h1>
-    </header>
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="form.html">Submit A Quest</a></li> <!--we are gonna have to make new files for these if we do keep them-->
-            <li><a href="contact.html">Contact</a></li> <!--we are gonna have to make new files for these if we do keep them-->
-            <li><a href="about.html">About</a></li> <!--we are gonna have to make new files for these if we do keep them-->
-            <li><a href="rubric.html">Home</a></li> <!--we are gonna have to make new files for these if we do keep them-->
-        </ul>
-    </nav>
 
-    <table>
-        <caption><b>Quest Board</b></caption>
-        <tr>
-            <td><img src="gob.png" alt="Quest 1" width="100" height="150"></td>
-            <td><img src="quest2-1.png" alt="Quest 2" width="100" height="150"></td> 
-            <td><img src="quest3-1.png" alt="Quest 3" width="100" height="150"></td>
-            <td><img src="quest4-1.png" alt="Quest 4" width="100" height="150"></td>
-            <td><img src="quest5-1.png" alt="Quest 5" width="100" height="150"></td>
-        </tr>
-        <tr>
-            <td><img src="quest6-1.png" alt="Quest 1" width="100" height="150"></td>
-            <td><img src="quest7-1.png" alt="Quest 2" width="100" height="150"></td> 
-            <td><img src="quest8-1.png" alt="Quest 3" width="100" height="150"></td>
-            <td><img src="quest9-1.png" alt="Quest 4" width="100" height="150"></td>
-            <td><img src="quest10-1.png" alt="Quest 5" width="100" height="150"></td>
-        </tr>
-        <tr>
-            <td><img src="quest11-1.png" alt="Quest 1" width="100" height="150"></td>
-            <td><img src="quest12-1.png" alt="Quest 2" width="100" height="150"></td> 
-            <td><img src="quest13-1.png" alt="Quest 3" width="100" height="150"></td>
-            <td><img src="quest14-1.png" alt="Quest 4" width="100" height="150"></td>
-            <td><img src="quest15-1.png" alt="Quest 5" width="100" height="150"></td>
-        </tr>
-    </table>
+<div class="header">
+  Quest Tracker
+</div>
+
+<div class="nav">
+  <a href="index.html">Home</a>
+  <a href="#">About us</a>
+  <a href="#">Contact</a>
+  <a href="#">Rubric</a>
+</div>
+
+<table>
+  <tr>
+    <th>Quest Name</th>
+    <th>Quest Description</th>
+    <th>Action</th>
+  </tr>
+  <!-- Add rows with quest information here -->
+</table>
+
+<div class="list-container">
+  <div class="quest-list">
+    <h3>Completed Quests</h3>
+    <ul>
+      <!-- Add completed quests here -->
+    </ul>
+  </div>
+  <div class="quest-list">
+    <h3>Uncompleted Quests</h3>
+    <ul>
+      <!-- Add uncompleted quests here -->
+    </ul>
+  </div>
+</div>
+
+>>>>>>> origin/website_framework
 </body>
 </html>
