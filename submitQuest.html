@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Submit a Quest</title>
+    <link href="css/traQuestStyling.css" rel="stylesheet">
+</head>
+<body>
+    <div class="header">
+        <h1>Quest Tracker</h1>
+      </div>
+      
+      <div class="nav">
+        <a href="index.html">Home</a>
+        <a href="#">Submit a Quest</a>
+        <a href="#">About us</a>
+        <a href="#">Contact</a>
+        <a href="#">Rubric</a>
+      </div>
+
+      <form id="sub">
+        <p>
+            <label for="questName">Quest Name:</label>
+            <input type="text" id="questName">
+        </p>
+        <p>
+            <label for="questReward">Quest Reward:</label>
+            <input type="text" id="questReward">
+        </p>
+        <p>
+            <label for="questDesc">Quest Description:</label>      
+            <textarea name="desc" id="questDesc" rows="5" cols="50"></textarea>
+        </p>
+      </form>
+
+      <button type="button" form="sub">SUBMIT</button>
+</body>
+
+</html>
