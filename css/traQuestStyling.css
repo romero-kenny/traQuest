@@ -42,3 +42,44 @@ body {
   .quest-list {
     width: 45%;
   }
+  .form-center {
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+  }
+  form {
+    background-color: lightgray;
+    padding: 15px;
+    border-radius: 5px;
+  }
+  label {
+    width: 150px;
+    display: inline-block;
+    text-align: left;
+    margin-right: 15px;
+  }
+  input[type=text], textarea {
+    box-sizing: border-box;
+    width: 300px;
+    padding: 10px;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+  }
+  .center-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  button {
+    width: 100px;
+    background-color:dodgerblue;
+    color:white;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+  }  
+  button:hover {
+    background-color: royalblue;
+  }
