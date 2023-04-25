@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>traQuest</title>
+  <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <h1>traQuest</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact Us</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="quest-tracker">
+      <h2>Quest Tracker</h2>
+      <form id="add-quest-form" >
+
+        <label for="quest-name">Quest Name:</label>
+        <input type="text" id="quest-name" required > 
+
+        <label for="quest-reward">Quest Reward:</label>
+        <input type="text" id="quest-reward" required >
+        <br>
+        <label for="quest-desc">Quest Description:</label>
+        <br>
+        <textarea id="quest-desc" rows="3" required></textarea>
+        <br>
+        <button type="submit">Add Quest</button> 
+      </form>
+      <div id="quest-list"></div>
+    </section>
+
+    <section class="map-container">
+      <h2>Quest Map</h2>
+      <!-- Add your interactive map here. -->
+    </section>
+
+    <section class="quest-progress">
+      <h2>Quest Progress</h2>
+      <div class="progress-container">
+        <div class="completed-quests">
+          <h3>Completed Quests</h3>
+          <ul id="completed-quests"></ul>
+        </div>
+        <div class="active-quests">
+          <h3>Active Quests</h3>
+          <ul id="active-quests"></ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
