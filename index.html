@@ -1,82 +1,66 @@
-<!-- Made by: Christian Nygaard, Josue Amador, Tyler Banta, Kenneth Romero-->
-<!-- Created April 3rd, 2023 -->
-<!-- A website to better organize user created quests and keeps track of them. Additional features may come in the future. -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Quest Tracker</title>
-<link href="css/traQuestStyling.css" rel="stylesheet">
-<script src="javascript/traQuestScript.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>traQuest</title>
+  <link href="css/styles.css" rel="stylesheet">
+  <link href="css/form_styling.css" rel="stylesheet">
 </head>
 <body>
-<div class="header">
-  <h1>Quest Tracker</h1>
-</div>
+  <header>
+    <h1>traQuest</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact Us</a>
+    </nav>
+  </header>
 
-<div class="nav">
-  <a href="index.html">Home</a>
-  <a href="submitQuest.html">Submit a Quest</a>
-  <a href="#">About us</a>
-  <a href="#">Contact</a>
-  <a href="#">Rubric</a>
-</div>
+  <main>
+    <section class="quest-tracker">
+        <div class="add-quest">
+            <h2>Add Quests</h2>
+            <form id="add-quest-form" >
 
-<table>
-  <tr>
-    <th>Quest Name</th>
-    <th>Quest Description</th>
-    <th>Action</th>
-  </tr>
-  <!-- Add rows with quest information here -->
-  <tr>
-    <td>Hunt</td>
-    <td>Hunt a goblin warrior.</td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>Explore</td>
-    <td>A new dungeon has been found and needs to be explored. Be Prepared for the unknown. </td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>Collect</td>
-    <td>Weapon and armor smiths are in need of materials. Collect crytals and deliver them. </td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>Exterminate</td>
-    <td>A goblin squadron has set up camp in a well traveled area. Clear the camp to allow travelers to continue their journeys.</td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>Missing</td>
-    <td>An elven warrior has gone missing recently. Find her and report your findings.</td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>Hunt</td>
-    <td>An ogre has been spotted in the forest. Hunt it and bring back proof of your success.</td>
-    <td></td>
-  </tr>
-   
-</table>
+                <label for="quest-name">Quest Name:</label>
+                <input type="text" id="quest-name" required > 
+                <br>
 
-<div class="list-container">
-  <div class="quest-list">
-    <h3>Completed Quests</h3>
-    <ul>
-      <!-- Add completed quests here -->
-    </ul>
-  </div>
-  <div class="quest-list">
-    <h3>Uncompleted Quests</h3>
-    <ul>
-      <!-- Add uncompleted quests here -->
-    </ul>
-  </div>
-</div>
+                <label for="quest-reward">Quest Reward:</label>
+                <input type="text" id="quest-reward" required >
+
+                <br>
+                <label for="quest-desc">Quest Description:</label>
+                <textarea id="quest-desc" rows="3" required></textarea>
+                <br>
+                <button type="submit">Add Quest</button> 
+            </form>
+        </div>
+        <h2>Available Quests</h2>
+      <div id="quest-list"></div>
+    </section>
+
+    <section class="map-container">
+      <h2>Quest Map</h2>
+      <!-- Add your interactive map here. -->
+    </section>
+
+    <section class="quest-progress">
+      <h2>Quest Progress</h2>
+      <div class="progress-container">
+        <div class="completed-quests">
+          <h3>Completed Quests</h3>
+          <ul id="completed-quests"></ul>
+        </div>
+        <div class="active-quests">
+          <h3>Active Quests</h3>
+          <ul id="active-quests"></ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="javascript/script.js"></script>
 </body>
-
 </html>
