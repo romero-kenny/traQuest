@@ -18,21 +18,25 @@
 
   <main>
     <section class="quest-tracker">
-      <h3>Add Quests</h3>
-      <form id="add-quest-form" >
+        <div class="add-quest">
+            <h2>Add Quests</h2>
+            <form id="add-quest-form" >
 
-        <label for="quest-name">Quest Name:</label>
-        <input type="text" id="quest-name" required > 
+                <label for="quest-name">Quest Name:</label>
+                <input type="text" id="quest-name" required > 
+                <br>
 
-        <label for="quest-reward">Quest Reward:</label>
-        <input type="text" id="quest-reward" required >
+                <label for="quest-reward">Quest Reward:</label>
+                <input type="text" id="quest-reward" required >
 
-        <br>
-        <label for="quest-desc">Quest Description:</label>
-        <textarea id="quest-desc" rows="1" required></textarea>
-        <br>
-        <button type="submit">Add Quest</button> 
-      </form>
+                <br>
+                <label for="quest-desc">Quest Description:</label>
+                <textarea id="quest-desc" rows="3" required></textarea>
+                <br>
+                <button type="submit">Add Quest</button> 
+            </form>
+        </div>
+        <h2>Available Quests</h2>
       <div id="quest-list"></div>
     </section>
 
