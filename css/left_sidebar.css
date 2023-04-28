@@ -1,0 +1,59 @@
+#left-sidebar {
+    display: none;
+}
+
+.add-quest {
+    background-color: #f2e2c4;
+    border-color: black;
+    border-style: outset;
+    position: fixed;
+    top: 14.5%;
+    left: 0;
+    width: 12%;
+    min-width: 205px;
+    height: 100%;
+    color: black;
+    z-index: 10;
+    overflow-x: hidden;
+}
+
+.add-quest h2 {
+    margin-bottom: 5px;
+    margin-left: 5px;
+}
+
+.add-quest form {
+    display: inline-block;
+}
+
+.quest-tracker form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    margin-left: 5px;
+}
+
+.quest-tracker label,
+.quest-tracker input,
+.quest-tracker textarea {
+    margin-bottom: 10px;
+    display: flex;
+}
+
+
+.quest-tracker form {
+    display: inline-flexbox;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.quest-tracker label {
+    margin-left: 5px;
+}
+
+.quest-tracker textarea {
+    resize: none;
+    size: 10px;
+}

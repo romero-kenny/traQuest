@@ -1,82 +1,114 @@
-<!-- Made by: Christian Nygaard, Josue Amador, Tyler Banta, Kenneth Romero-->
-<!-- Created April 3rd, 2023 -->
-<!-- A website to better organize user created quests and keeps track of them. Additional features may come in the future. -->
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Quest Tracker</title>
-<link href="css/traQuestStyling.css" rel="stylesheet">
-<script src="javascript/traQuestScript.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>traQuest</title>
+  <link href="css/styles.css" rel="stylesheet">
+  <link href="css/left_sidebar.css" rel="stylesheet">
+  <link href="css/right_sidebar.css" rel="stylesheet">
 </head>
+
 <body>
-<div class="header">
-  <h1>Quest Tracker</h1>
-</div>
+  <header>
+    <h1>traQuest</h1>
+    <nav>
+      <a href="#home-base">Home</a>
+      <a href="#" id="display-left-sidebar">Add Quests/Maps</a>
+      <a href="#" id="display-right-sidebar">Active Quests</a>
+      <a href="#about-us">About</a>
+      <a href="#contact-us">Contact Us</a>
+    </nav>
+  </header>
 
-<div class="nav">
-  <a href="index.html">Home</a>
-  <a href="submitQuest.html">Submit a Quest</a>
-  <a href="#">About us</a>
-  <a href="#">Contact</a>
-  <a href="#">Rubric</a>
-</div>
+  <section id="left-sidebar">
+    <div class="add-quest quest-tracker">
+      <h2>Add Quests</h2>
+      <form id="add-quest-form">
 
-<table>
-  <tr>
-    <th>Quest Name</th>
-    <th>Quest Description</th>
-    <th>Action</th>
-  </tr>
-  <!-- Add rows with quest information here -->
-  <tr>
-    <td>Hunt</td>
-    <td>Hunt a goblin warrior.</td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>Explore</td>
-    <td>A new dungeon has been found and needs to be explored. Be Prepared for the unknown. </td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>Collect</td>
-    <td>Weapon and armor smiths are in need of materials. Collect crytals and deliver them. </td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>Exterminate</td>
-    <td>A goblin squadron has set up camp in a well traveled area. Clear the camp to allow travelers to continue their journeys.</td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>Missing</td>
-    <td>An elven warrior has gone missing recently. Find her and report your findings.</td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>Hunt</td>
-    <td>An ogre has been spotted in the forest. Hunt it and bring back proof of your success.</td>
-    <td></td>
-  </tr>
-   
-</table>
+        <label for="quest-name">Quest Name:</label>
+        <input type="text" id="quest-name" required>
 
-<div class="list-container">
-  <div class="quest-list">
-    <h3>Completed Quests</h3>
-    <ul>
-      <!-- Add completed quests here -->
-    </ul>
-  </div>
-  <div class="quest-list">
-    <h3>Uncompleted Quests</h3>
-    <ul>
-      <!-- Add uncompleted quests here -->
-    </ul>
-  </div>
-</div>
+        <label for="quest-reward">Quest Reward:</label>
+        <input type="text" id="quest-reward" required>
+
+        <label for="quest-desc">Quest Description:</label>
+        <textarea id="quest-desc" rows="3" required></textarea>
+
+        <label for="quest-location">Quest Location:</label>
+        <input type="text" id="quest-location">
+
+        <button type="submit">Add Quest</button>
+      </form>
+
+      <h2>Upload Map</h2>
+      <form id="map-upload">
+        <label for="maptitle">Map Title:</label>
+        <input type="text" id="maptitle" required>
+
+        <input type="file" id="file-input" accept="image/*" required>
+        <button type="submit">Upload Map</button>
+      </form>
+    </div>
+  </section>
+
+  <section id="right-sidebar">
+    <div class="right-sidebar">
+      <h3>Active Quests</h3>
+      <ul id="active-quests"></ul>
+    </div>
+  </section>
+
+
+
+  <section id="home-base" class="main-content">
+    <main>
+      <section class="quest-tracker">
+
+        <h2>Available Quests</h2>
+        <div id="quest-list"></div>
+      </section>
+
+      <section id="map-section">
+        <h2>Quest Map</h2>
+        <div class="map-container">
+          <div id="map-file"></div>
+        </div>
+      </section>
+
+      <section class="quest-progress">
+        <h2>Completed Quests</h2>
+        <div class="completed-quests">
+          <ul id="completed-quests"></ul>
+        </div>
+      </section>
+    </main>
+
+    <script src="javascript/add_map.js"></script>
+    <script src="javascript/quest_interactions.js"></script>
+  </section>
+
+  <section id="about-us">
+    <div class="about-us">
+      <h2>About Us</h2>
+      <p>traQuest began as a simple quest tracker, but has evolved into a versatile tool for Dungeons & Dragons
+        enthusiasts. While we're still working on adding more features to make the website even better, traQuest
+        currently offers an easy way to map and keep track of your campaign progress. Our user-friendly interface allows
+        you to effortlessly organize your adventure, ensuring that your epic journey remains immersive and enjoyable.
+        Join us on our mission to create the ultimate D&D companion tool!</p>
+      <h3>Created by:</h3>
+      <p>Josue Amador, Tyler Banta, Christian Nygaard, Kenneth Romero</p>
+    </div>
+  </section>
+  <footer id="contact-us">
+    <h2>Contact Us</h2>
+    <a href="https://www.youtube.com/watch?v=ZtjFsQBuJWw" target="_blank">Email Us!</a>
+    <a href="https://youtu.be/-HdqqqiY6dk" target="_blank">Phone Us!</a>
+    <a href="https://youtu.be/a4ezdZ0eIf0" target="_blank">Fax Us!</a>
+    <a href="https://github.com/romero-kenny/traQuest" target="_blank">Our Github!</a>
+  </footer>
 </body>
+
 
 </html>
