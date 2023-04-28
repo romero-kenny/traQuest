@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
   <link href="css/styles.css" rel="stylesheet">
   <link href="css/form_styling.css" rel="stylesheet">
 </head>
+
 <body>
   <header>
     <h1>traQuest</h1>
@@ -16,51 +18,67 @@
       <a href="contact.html">Contact Us</a>
     </nav>
   </header>
+  <section id="left-side-bar">
+    <div class="add-quest quest-tracker" id="left-side-bar">
+      <h2>Add Quests</h2>
+      <form id="add-quest-form">
 
-  <main>
-    <section class="quest-tracker">
-        <div class="add-quest">
-            <h2>Add Quests</h2>
-            <form id="add-quest-form" >
+        <label for="quest-name">Quest Name:</label>
+        <input type="text" id="quest-name" required>
 
-                <label for="quest-name">Quest Name:</label>
-                <input type="text" id="quest-name" required > 
-                <br>
+        <label for="quest-reward">Quest Reward:</label>
+        <input type="text" id="quest-reward" required>
 
-                <label for="quest-reward">Quest Reward:</label>
-                <input type="text" id="quest-reward" required >
+        <label for="quest-desc">Quest Description:</label>
+        <textarea id="quest-desc" rows="3" required></textarea>
 
-                <br>
-                <label for="quest-desc">Quest Description:</label>
-                <textarea id="quest-desc" rows="3" required></textarea>
-                <br>
-                <button type="submit">Add Quest</button> 
-            </form>
-        </div>
+        <button type="submit">Add Quest</button>
+      </form>
+
+      <h2>Upload Map</h2>
+      <form id="map-upload">
+        <label for="map-title">Map Title:</label>
+        <input type="text" id="map-title" required>
+
+        <input type="file" id="file-input" accept="image/*" required>
+        <button type="submit">Upload Map</button>
+      </form>
+    </div>
+  </section>
+
+  <section class="main-content">
+    <main>
+      <section class="quest-tracker">
+
         <h2>Available Quests</h2>
-      <div id="quest-list"></div>
-    </section>
+        <div id="quest-list"></div>
+      </section>
 
-    <section class="map-container">
-      <h2>Quest Map</h2>
-      <!-- Add your interactive map here. -->
-    </section>
-
-    <section class="quest-progress">
-      <h2>Quest Progress</h2>
-      <div class="progress-container">
-        <div class="completed-quests">
-          <h3>Completed Quests</h3>
-          <ul id="completed-quests"></ul>
+      <section id="map-section">
+        <div class="map-container">
+          <h2>Quest Map</h2>
+          <div id="map-file"></div>
         </div>
-        <div class="active-quests">
-          <h3>Active Quests</h3>
-          <ul id="active-quests"></ul>
-        </div>
-      </div>
-    </section>
-  </main>
+      </section>
 
-  <script src="javascript/script.js"></script>
+      <section class="quest-progress">
+        <h2>Quest Progress</h2>
+        <div class="progress-container">
+          <div class="completed-quests">
+            <h3>Completed Quests</h3>
+            <ul id="completed-quests"></ul>
+          </div>
+          <div class="active-quests">
+            <h3>Active Quests</h3>
+            <ul id="active-quests"></ul>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="javascript/add_quests.js"></script>
+    <script src="javascript/add_map.js"></script>
+  </section>
 </body>
+
 </html>
