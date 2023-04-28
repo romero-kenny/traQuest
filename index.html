@@ -7,6 +7,7 @@
   <title>traQuest</title>
   <link href="css/styles.css" rel="stylesheet">
   <link href="css/form_styling.css" rel="stylesheet">
+  <link href="css/right_sidebar.css" rel="stylesheet">
 </head>
 
 <body>
@@ -18,6 +19,7 @@
       <a href="contact.html">Contact Us</a>
     </nav>
   </header>
+
   <section id="left-side-bar">
     <div class="add-quest quest-tracker" id="left-side-bar">
       <h2>Add Quests</h2>
@@ -46,6 +48,15 @@
     </div>
   </section>
 
+  <section id="right-side">
+    <div class="right-sidebar" id="right-sidebar">
+      <h3>Active Quests</h3>
+      <ul id="active-quests"></ul>
+    </div>
+  </section>
+
+
+
   <section class="main-content">
     <main>
       <section class="quest-tracker">
@@ -67,10 +78,6 @@
           <div class="completed-quests">
             <h3>Completed Quests</h3>
             <ul id="completed-quests"></ul>
-          </div>
-          <div class="active-quests">
-            <h3>Active Quests</h3>
-            <ul id="active-quests"></ul>
           </div>
         </div>
       </section>

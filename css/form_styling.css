@@ -1,5 +1,5 @@
 .add-quest {
-    background-color: navy;
+    background-color: #f2e2c4;
     border-color: black;
     border-style: outset;
     position: fixed;
@@ -8,7 +8,7 @@
     width: 12%;
     min-width: 205px;
     height: 100%;
-    color: white;
+    color: black;
     z-index: 10;
 }
 
@@ -65,3 +65,4 @@
     resize: none;
     size: 10px;
 }
+

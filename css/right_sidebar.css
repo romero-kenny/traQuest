@@ -1,0 +1,18 @@
+.right-sidebar {
+    right: 0;
+    top: 18.5%;
+    z-index: 10;
+    background-color: #f2e2c4;
+    position: fixed;
+    width: 12%;
+    min-width: 205px;
+    height: 100%;
+    color: black;
+    border-color: black;
+    border-style: outset;
+}
+
+.right-sidebar h3 {
+    margin-bottom: 5px;
+    margin-left: 5px;
+}
