@@ -81,6 +81,8 @@ section {
   display: flex;
   margin: 5px;
   padding: 5px;
+  min-height: 300px;
+  border: black inset 3px;
 }
 
 .map-container img {
