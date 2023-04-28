@@ -60,7 +60,8 @@ button:hover {
   padding-top: calc(120px + 2vh);
 }
 
-main {
+main,
+.about-us {
   max-width: 60%;
   margin: 0 auto;
   padding: 40px;
@@ -78,13 +79,15 @@ section {
   align-items: center;
   justify-content: center;
   display: flex;
+  margin: 5px;
+  padding: 5px;
 }
 
 .map-container img {
-  max-width: 98%;
+  max-width: 100%;
   max-height: 100%;
   float: left;
-  margin: 10px;
+  border: black outset 3px solid; 
 }
 
 .progress-container {
@@ -104,10 +107,17 @@ section {
   margin: 5px;
   background-color: rgba(85, 85, 85, 0.20);
   padding: 5px;
+  max-width: 240px;
+  max-height: 300px;
   border-color: black;
   border-style: outset;
   border-radius: 10px;
   border-width: 2px;
+  overflow-wrap: break-word;
+}
+
+.made-quests p {
+  overflow-y: auto;
 }
 
 .made-quests .delete-quest {
@@ -126,6 +136,15 @@ section {
   background-color: #c9d5bb;
 }
 
+.made-quests .abandon-quest {
+  background-color: #6e7679;
+  display: none;
+}
+
+.made-quests .abandon-quest:hover {
+  background-color: #8b8b8b;
+}
+
 button {
   background-color: #489fb5;
   color: white;
@@ -134,9 +153,39 @@ button {
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s;
+  margin: 2px;
 }
 
 button:hover {
   background-color: #2c6270;
 }
 
+footer {
+  background-color: #3c3c3c;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+  position: relative;
+  width: 100%;
+  bottom: 0;
+}
+
+footer h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+footer p {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+footer a {
+  color: white;
+  text-decoration: none;
+  margin: 5px;
+}
+
+footer a:hover {
+  color: #489fb5;
+}

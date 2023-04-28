@@ -1,7 +1,7 @@
 function displayMapImage() {
     const mapUploadForm = document.getElementById('map-upload');
     const fileInput = document.getElementById('file-input');
-    const mapTitleInput = document.getElementById('map-title');
+    const mapTitleInput = document.getElementById('maptitle');
     const mapFile = document.getElementById('map-file');
 
     mapUploadForm.addEventListener('submit', (event) => {
@@ -13,13 +13,11 @@ function displayMapImage() {
             reader.onload = (e) => {
                 const mapContainer = document.createElement('div');
                 const img = document.createElement('img');
-                const title = document.createElement('h2');
 
-                title.textContent = mapTitleInput.value;
                 img.src = e.target.result;
-                img.alt = 'Map of ' + mapTitleInput.value;
+                img.alt = 'Map of ' + mapTitleInput.value.textContent;
 
-                mapContainer.appendChild(title);
+                //mapContainer.appendChild(mapTitle);
                 mapContainer.appendChild(img);
 
                 mapFile.innerHTML = '';

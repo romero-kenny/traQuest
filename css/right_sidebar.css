@@ -14,6 +14,7 @@
     color: black;
     border-color: black;
     border-style: outset;
+    overflow-y: auto;
 }
 
 .right-sidebar h3 {

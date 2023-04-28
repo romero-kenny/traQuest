@@ -18,11 +18,13 @@ document.addEventListener('DOMContentLoaded', () => {
         questItem.innerHTML = `
         <h4>${questName}</h4>
         <p>Reward: ${questReward}</p>
-        <p>Description:<br>${questDesc}</p>
+        <p>Description:<p>
+        <p>${questDesc}</p>
         <p>Location: ${questLocation}</p>
         <button class="pursue-quest">Pursue</button>
         <button class="complete-quest">Complete</button>
         <button class="delete-quest">Delete</button>
+        <button class="abandon-quest">Abandon</button>
       `;
 
         questList.appendChild(questItem);
@@ -30,6 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const completedQuest = questItem.querySelector('.complete-quest');
         const deleteQuest = questItem.querySelector('.delete-quest');
         const pursueQuest = questItem.querySelector('.pursue-quest');
+        const abandonQuest = questItem.querySelector('.abandon-quest');
 
         completedQuest.addEventListener('click', (event) => {
             event.preventDefault();
@@ -40,6 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
             completedQuest.style.display = 'none';
             pursueQuest.style.display = 'none';
+            abandonQuest.style.display = 'none';
         });
 
         deleteQuest.addEventListener('click', (event) => {
@@ -53,12 +57,20 @@ document.addEventListener('DOMContentLoaded', () => {
             if (questList.contains(questItem)) {
                 questList.removeChild(questItem);
             }
-        })
+        });
 
         pursueQuest.addEventListener('click', (event) => {
             event.preventDefault();
             activeList.appendChild(questItem);
             pursueQuest.style.display = 'none';
+            abandonQuest.style.display = 'block';
+        });
+
+        abandonQuest.addEventListener('click', (event) => {
+            event.preventDefault();
+            questList.appendChild(questItem);
+            abandonQuest.style.display = 'none';
+            pursueQuest.style.display = 'block';
         })
 
         form.reset();
