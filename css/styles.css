@@ -92,19 +92,19 @@
     border-width: 2px;
 }
 
-.quest-tracker .made-quests .delete-quest {
+.made-quests .delete-quest {
   background-color: #8b3d3f;
 }
 
-.quest-tracker .made-quests .delete-quest:hover {
+.made-quests .delete-quest:hover {
   background-color: #db5461;
 }
 
-.quest-tracker .made-quests .complete-quest {
+.made-quests .complete-quest {
   background-color: #9db68c;
 }
 
-.quest-tracker .made-quests .complete-quest:hover {
+.made-quests .complete-quest:hover {
   background-color: #c9d5bb;
 }
 

@@ -63,4 +63,28 @@ document.addEventListener('DOMContentLoaded', () => {
         form.reset();
     });
 
+    //Left Sidebar Interaction
+    const dispLeftSide = document.getElementById('display-left-sidebar');
+    dispLeftSide.addEventListener('click', (event) => {
+        event.preventDefault();
+        const leftSidebar = document.getElementById('left-sidebar');
+        if (leftSidebar.style.display === 'none') {
+            leftSidebar.style.display = 'block';
+        } else {
+            leftSidebar.style.display = 'none';
+        }
+    })
+
+    //Right Sidebar Interaction
+    const dispRightSide = document.getElementById('display-right-sidebar');
+    dispRightSide.addEventListener('click', (event) => {
+        event.preventDefault();
+        const rightSidebar = document.getElementById('right-sidebar');
+        if (rightSidebar.style.display === 'none') {
+            rightSidebar.style.display = 'block';
+        } else {
+            rightSidebar.style.display = 'none';
+        }
+    })
 });
+

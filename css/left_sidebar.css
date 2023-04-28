@@ -1,3 +1,6 @@
+#left-sidebar {
+    display: none;
+}
 .add-quest {
     background-color: #f2e2c4;
     border-color: black;
