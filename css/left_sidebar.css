@@ -1,12 +1,13 @@
 #left-sidebar {
     display: none;
 }
+
 .add-quest {
     background-color: #f2e2c4;
     border-color: black;
     border-style: outset;
     position: fixed;
-    top: 18.5%;
+    top: 14.5%;
     left: 0;
     width: 12%;
     min-width: 205px;
@@ -55,4 +56,3 @@
     resize: none;
     size: 10px;
 }
-

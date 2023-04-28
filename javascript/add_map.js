@@ -13,12 +13,11 @@ function displayMapImage() {
             reader.onload = (e) => {
                 const mapContainer = document.createElement('div');
                 const img = document.createElement('img');
-                const title = document.createElement('h4');
+                const title = document.createElement('h2');
 
                 title.textContent = mapTitleInput.value;
                 img.src = e.target.result;
                 img.alt = 'Map of ' + mapTitleInput.value;
-                img.style.maxWidth = '60%';
 
                 mapContainer.appendChild(title);
                 mapContainer.appendChild(img);
@@ -30,8 +29,8 @@ function displayMapImage() {
         } else {
             mapFile.innerHTML = '';
         }
+        mapUploadForm.reset();
     });
-    mapUploadForm.reset();
 }
 
 displayMapImage();
