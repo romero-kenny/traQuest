@@ -89,7 +89,7 @@ section {
   max-width: 100%;
   max-height: 100%;
   float: left;
-  border: black outset 3px solid; 
+  border: black outset 3px solid;
 }
 
 .progress-container {
