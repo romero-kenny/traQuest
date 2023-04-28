@@ -31,6 +31,7 @@ function displayMapImage() {
             mapFile.innerHTML = '';
         }
     });
+    mapUploadForm.reset();
 }
 
 displayMapImage();

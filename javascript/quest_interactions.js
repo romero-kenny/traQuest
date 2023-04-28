@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const completeList = document.getElementById('completed-quests');
     const activeList = document.getElementById('active-quests');
 
+    // Add a new quest
     form.addEventListener('submit', (e) => {
         e.preventDefault();
 
@@ -68,10 +69,10 @@ document.addEventListener('DOMContentLoaded', () => {
     dispLeftSide.addEventListener('click', (event) => {
         event.preventDefault();
         const leftSidebar = document.getElementById('left-sidebar');
-        if (leftSidebar.style.display === 'none') {
-            leftSidebar.style.display = 'block';
-        } else {
+        if (leftSidebar.style.display === 'block') {
             leftSidebar.style.display = 'none';
+        } else {
+            leftSidebar.style.display = 'block';
         }
     })
 
@@ -80,10 +81,10 @@ document.addEventListener('DOMContentLoaded', () => {
     dispRightSide.addEventListener('click', (event) => {
         event.preventDefault();
         const rightSidebar = document.getElementById('right-sidebar');
-        if (rightSidebar.style.display === 'none') {
-            rightSidebar.style.display = 'block';
-        } else {
+        if (rightSidebar.style.display === 'block') {
             rightSidebar.style.display = 'none';
+        } else {
+            rightSidebar.style.display = 'block';
         }
     })
 });
